@@ -1,0 +1,48 @@
+/*this css file defines the style for the main page of this site*/
+/*The elements and their styles are in the order of the dom tree*/
+body{
+  margin:0px;
+}
+/*this section is the head section of the page*/
+div.head{
+  text-align:center;
+display:block;
+  background-color:rgb(30, 136, 229);
+  padding-top:100px;
+  padding-bottom:50px;
+  margin:0px;
+}
+/*the elements contained within the div.head container:*/
+h1{
+margin:0px;
+font-size:50px;
+  letter-spacing:3px;
+  font-family:Verdana,Lucida,Ariel;
+  font-weight:300;
+}
+/*this is a genral rule for normal subheadings ,etc.*/
+span.subtitles{
+  font-size:20px;
+  color:white;
+}
+
+div.content{
+padding-top:50px;
+text-align:center;
+
+}
+/*elements within the div.content container*/
+a.link{
+background-color:rgb(255, 152, 0);
+text-decoration:none;
+padding:5px;
+font-size:25px;
+color:white;
+border-radius:5%;-moz-border-radius:5%;-webkit-border-radius:5%;
+}
+a.link:hover{
+background-color:white;
+border:solid rgb(255, 152, 0) 3px;
+padding:4px;
+color:black;
+}

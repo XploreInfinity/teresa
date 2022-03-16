@@ -1,0 +1,56 @@
+/*This CSS files styles the letstalk page of Teresa*/
+/*Elements in order of the DOM tree*/
+/*This is the entire container for all the elements which allow the user to interact with Teresa*/
+.response_ui{
+	text-align:center;
+	background-color:orange;
+    border:solid 1px blue;
+	
+	}
+
+	#user_response{
+	min-width:300px;
+	min-height:25px;
+	font-size:20px;
+	}
+/*These are the record and send buttons*/
+.response_btn{
+    border:none;
+	background-color:pink;
+	padding:5px;
+  font-size:20px;
+	
+	}
+.response_btn:hover{
+    border:1px solid blue;
+	}
+/*This div container stores all the log of conversation between the user and Teresa.*/
+	#conversation{
+	text-align:center;
+	background-color:grey;
+  max-height:300px;
+  overflow:auto;
+	}
+/*the pop-ups containing ai response*/
+.ai_response{
+background-color:pink;
+border-radius:15%;-moz-border-radius:15%;-webkit-border-radius:15%;
+padding:5px;
+margin-top:5px;margin-bottom:5px;
+font-size:20px;
+display:inline-block;
+border:solid red 1px;
+min-width:100px;
+
+}
+/*The pop-up containing user-response*/
+.user_response{
+background-color:hotpink;
+border-radius:15%;-moz-border-radius:15%;-webkit-border-radius:15%;
+margin-top:5px;margin-bottom:5px;
+padding:5px;
+font-size:20px;	
+display:inline-block;
+border:solid red 1px;
+min-width:100px;
+}
