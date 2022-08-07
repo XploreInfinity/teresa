@@ -6,21 +6,33 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <script src="/js/jquery_min.js"></script>
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <script src="/js/axios.js"></script>  
     <script src="https://code.responsivevoice.org/responsivevoice.js?key=lLNz6gNU"></script>
-    <script src="/js/function.js" type="text/javascript"></script>
+    <script src="/js/jquery_min.js"></script>
+    <script src="/js/main.js" type="text/javascript"></script>    
+    <!--<script src="/js/function.js" type="text/javascript"></script>-->
     <link rel="stylesheet" type="text/css" href="/css/main.css" />
     <link rel="stylesheet" type="text/css" href="/css/letstalk.css" />
+    <!--Stylesheets for cards:-->
+    <link rel="stylesheet" type="text/css" href="/css/searchresults-card.css" />
+    <link rel="stylesheet" type="text/css" href="/css/weather-card.css" />
   </head>
   <body>
-    <div class="head">
-      <h1>Teresa</h1>
-      <span class="subtitles"> A Next-Gen AI Assistant </span>
+    <div class="header">
+      <div class="img_container">
+        <img src="/assets/profile.svg" id="profile_img" />  
+      </div>
+      <div class="text_container">
+        <div id="chatbot_name">Teresa</div>
+      <div class="subtitles"> A Next-Gen AI Assistant </div>
+      </div>
     </div>
+      <div id="conversation"></div>
     <div class="response_ui">
       <input id="user_response" placeholder="Say Something..." />
-      <button id="post_btn" class="response_btn">Send</button>
+      <div id="post_btn" class="response_btn"><img src="/assets/send.svg" id="sendbtn_img"/></div>
     </div>
-    <div id="conversation"></div>
   </body>
 </html>

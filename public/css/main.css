@@ -4,26 +4,40 @@ body{
   margin:0px;
 }
 /*this section is the head section of the page*/
-div.head{
-  text-align:center;
-display:block;
-  background-color:rgb(30, 136, 229);
-  padding-top:100px;
-  padding-bottom:50px;
-  margin:0px;
+div.header{
+  text-align:left;
+  display:block;
+  background-color: #2a2a72;
+  background-image: linear-gradient(315deg, #2a2a72 0%, #009ffd 74%);
+  /*background-color:rgb(30, 136, 229);*/
+  padding:0.5em 0em 0.5em 0.5em;
 }
 /*the elements contained within the div.head container:*/
-h1{
-margin:0px;
-font-size:50px;
-  letter-spacing:3px;
+#profile_img{
+  border-radius:50%;
+  aspect-ratio:1;
+  max-height: 2.5em;
+  max-width: 2.5em;
+  border:1px solid black;
+  float:left;
+}
+.text_container{
+  margin-top:0.3em;
+  margin-left:3em;
+  line-height:1;
+}
+#chatbot_name{
+  font-size:1.5em;
+  letter-spacing:0.1em;
   font-family:Verdana,Lucida,Ariel;
-  font-weight:300;
+  margin-left:0.3em;
 }
 /*this is a genral rule for normal subheadings ,etc.*/
-span.subtitles{
-  font-size:20px;
+.subtitles{
+  margin-left:1.3em;
   color:white;
+  font-style:italic;
+  font-size:0.8em;
 }
 
 div.content{

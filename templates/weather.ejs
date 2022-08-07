@@ -1,0 +1,42 @@
+<%
+  //Required to convert degrees to direction:
+  function degToCompass(num) {
+    var val = Math.floor((num / 22.5) + 0.5);
+    var arr = ["N", "NNE", "NE", "ENE", "E", "ESE", "SE", "SSE", "S", "SSW", "SW", "WSW", "W", "WNW", "NW", "NNW"];
+    return arr[(val % 16)];
+  }
+   //Required to convert UNIX time to HH:MM:
+  function toNormalTime(unix){
+    let time_stamp =unix*1000
+    let date = new Date(time_stamp)
+    return `${date.getHours()}:${date.getMinutes()}`
+  }
+%>
+<div class="weather-card">
+  <div class="weather-icon">
+    <img src="https://openweathermap.org/img/wn/<%=weatherData.weather[0].icon%>@2x.png" alt="weather-icon"/>
+  </div>
+  <div class="weather-location">
+    <%=weatherData.name%>,<%=weatherData.sys.country%>
+  </div>
+  <div class="main-conditions">
+    <div class="weather-description">
+      <%=weatherData.weather[0].description%>
+    </div>
+    <div class="weather-main-temperature">
+      <%=Math.round(weatherData.main.temp)%>&deg;C
+    </div>  
+  </div>
+  <div class="weather-feelslike-temp">
+    Feels Like: <%=Math.round(weatherData.main.feels_like)%>&deg;C
+  </div>
+  <div class="weather-temp-range">
+    Min: <%=Math.round(weatherData.main.temp_min)%>&deg;C &nbsp; Max: <%=Math.round(weatherData.main.temp_min)%>&deg;C 
+  </div>
+  <div class="secondary-conditions">
+    <img src="/assets/pressure.svg" class="weather-svg"> <%=weatherData.main.pressure%> hPa &nbsp;
+    <img src="/assets/humidity.svg" class="weather-svg"> <%=weatherData.main.humidity%>%  <br/>
+    <img src="/assets/wind.svg" class="weather-svg"> <%=weatherData.wind.speed%> m/s &nbsp;
+    <img src="/assets/compass.svg" class="weather-svg"> <%=degToCompass(weatherData.wind.deg)%>
+  </div>
+</div>

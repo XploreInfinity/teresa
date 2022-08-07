@@ -1,6 +1,6 @@
 {
   "name": "teresa",
-  "version": "1.0.0",
+  "version": "0.1-beta",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -12,13 +12,19 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@google-cloud/dialogflow": "^4.7.0",
     "axios": "^0.26.1",
+    "cookie-parser": "^1.4.6",
     "dotenv": "^16.0.0",
+    "duck-duck-scrape": "^2.2.1",
     "ejs": "^3.1.6",
     "express": "^4.17.3",
+    "he": "^1.2.0",
+    "helmet": "^4.6.0",
+    "morgan": "^1.10.0",
     "nodemon": "^2.0.15"
   },
   "engines": {
-   "node": ">=16.0.0"
+    "node": ">=16.0.0"
   }
 }

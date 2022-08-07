@@ -1,0 +1,5 @@
+#RENAME THIS FILE AS .env, it will store your secrets
+PORT = #YOUR Port number
+WEATHER_KEY = #YOUR OpenWeather API KEY
+PROJECT_ID = #YOUR Dialogflow PROJECT ID
+GOOGLE_APPLICATION_CREDENTIALS = #PATH TO THE .json FILE CONTAINING YOUR Google Application CREDENTIALS

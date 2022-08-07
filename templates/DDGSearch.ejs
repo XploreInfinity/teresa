@@ -1,0 +1,19 @@
+<div class="searchresults-card">
+  <%
+    for(let i = 0;i<searchData.length;i++){ 
+  %>
+      <div class="search_result">
+        <a href="<%=searchData[i].url%>" target="_blank" rel="noreferrer noopener" class="result_title">
+          <%=he.decode(searchData[i].title)%>
+        </a>
+        <div class="result_hostname">
+          <a href="https://<%=searchData[i].hostname%>" target="blank">
+          <%=searchData[i].hostname%>  
+          </a>
+        </div> 
+        <div class="result_description">
+          <%=searchData[i].description.replace(/<b>/ig,'').replace(/<\/b>/ig,'')%>
+        </div>
+      </div>
+  <%}%>
+</div>

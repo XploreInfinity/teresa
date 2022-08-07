@@ -1,56 +1,101 @@
 /*This CSS files styles the letstalk page of Teresa*/
 /*Elements in order of the DOM tree*/
 /*This is the entire container for all the elements which allow the user to interact with Teresa*/
-.response_ui{
-	text-align:center;
-	background-color:orange;
-    border:solid 1px blue;
-	
-	}
+body{
+  display:flex;
+  flex-direction:column;
+}
+@keyframes horizontal-shaking {
+ 0% { transform: translateX(0) }
+ 25% { transform: translateX(5px) }
+ 50% { transform: translateX(-5px) }
+ 75% { transform: translateX(5px) }
+ 100% { transform: translateX(0) }
+}
+.shake_ui{
+  animation: horizontal-shaking 0.35s;
+}
+.response_ui {
+  text-align: center;
+  /*border-top: solid 1px blue;*/
+  position: fixed;
+  bottom:0.5em;
+  display:flex;
+  justify-content:center;
+  gap:0.6em;
+  padding:0.5em;
+  /*position:absolute;
+  top:95vh;
+  transform:translateY(-100%);*/
+  width:100%;
+}
 
-	#user_response{
-	min-width:300px;
-	min-height:25px;
-	font-size:20px;
-	}
-/*These are the record and send buttons*/
-.response_btn{
-    border:none;
-	background-color:pink;
-	padding:5px;
-  font-size:20px;
-	
-	}
-.response_btn:hover{
-    border:1px solid blue;
-	}
+#user_response {
+  min-width: 80%;
+  min-height: 25px;
+  font-size: 20px;
+  border-radius:20px;
+  border-style:solid;
+}
+/*This is for the send button*/
+.response_btn {
+  border-radius: 50%;
+  background-color: #abe9cd;
+  background-image: linear-gradient(315deg, #abe9cd 0%, #3eadcf 74%);
+  padding: 0.6em;
+  margin-right:0.9em;
+}
+.response_btn:hover {
+  background-image: linear-gradient(315deg, #abe9cd 10%, #3eadcf 60%);
+}
+#sendbtn_img{
+  max-height: 1.5em;
+  min-height: 1.5em;
+  vertical-align:middle;
+  aspect-ratio: 1;
+}
+
 /*This div container stores all the log of conversation between the user and Teresa.*/
-	#conversation{
-	text-align:center;
-	background-color:grey;
-  max-height:300px;
-  overflow:auto;
-	}
+#conversation {
+  min-height: 82vh;
+  max-height: 82vh;
+  overflow: auto;
+  display:flex;
+  flex-direction:column;
+  /*border:1px solid red;*/
+}
+
 /*the pop-ups containing ai response*/
-.ai_response{
-background-color:pink;
-border-radius:15%;-moz-border-radius:15%;-webkit-border-radius:15%;
-padding:5px;
-margin-top:5px;margin-bottom:5px;
-font-size:20px;
-display:inline-block;
-border:solid red 1px;
-min-width:100px;
+.ai_response {
+  text-align:left;
+  background-color: #abe9cd;
+background-image: linear-gradient(315deg, #abe9cd 0%, #3eadcf 74%);
+  border-radius: 10px;
+  margin: 5px auto 5px 0.3em;
+  padding: 5px;
+  font-size: 1em;
+  display:inline-block;
+  min-width: 100px;
+  max-width:70%;
+  word-wrap: break-word;
+  
+}
+.ai_response:before{
 
 }
 /*The pop-up containing user-response*/
-.user_response{
-background-color:hotpink;
-border-radius:15%;-moz-border-radius:15%;-webkit-border-radius:15%;
-margin-top:5px;margin-bottom:5px;
-padding:5px;
-font-size:20px;	
-display:inline-block;
-border:solid red 1px;
-min-width:100px;
+.user_response {
+  text-align:left;
+  /*background-color: #1fd1f9;
+  background-image: linear-gradient(315deg, #1fd1f9 0%, #b621fe 74%);
+  */
+  background-color: #5de6de;
+background-image: linear-gradient(315deg, #5de6de 0%, #b58ecc 74%);
+  border-radius: 10px;
+  margin: 5px 0.3em 5px auto;
+  padding: 5px 1em;
+  font-size: 1em;
+  display: inline-block;
+  max-width:70%;
+  word-wrap: break-word;
 }

@@ -1,15 +1,11 @@
 const express = require("express");
 const router = express.Router();
 const dotenv = require('dotenv')
-console.log(dotenv.config({path:'.env'}))
-router.get("/", (req, res) => {
-  res.send('Chocolate')
-})
-
+dotenv.config({path:'.env'})
 router.post("/",(req,res)=>{
   const projectId = process.env.PROJECT_ID;
   // sessionId: String representing a random number or hashed user identifier
-  const sessionId = req.body.sessionId
+  const sessionId = req.sessionId
   // queries: A set of sequential queries to be send to Dialogflow agent for Intent Detection
   const query = [req.body.query]
   // languageCode: Indicates the language Dialogflow agent should use to detect intents
@@ -29,7 +25,7 @@ router.post("/",(req,res)=>{
     languageCode
   ) {
     // The path to identify the agent that owns the created intent.
-    const sessionPath = sessionClient.projectAgentSessionPath(
+   const sessionPath = sessionClient.projectAgentSessionPath(
       projectId,
       sessionId
     );
@@ -73,8 +69,13 @@ router.post("/",(req,res)=>{
         console.log(
           `Fulfillment Text: ${intentResponse.queryResult.fulfillmentText}`
         );
+        console.log(intentResponse.queryResult.fulfillmentMessages)
         // Use the context from this response for next queries
         context = intentResponse.queryResult.outputContexts;
+        if(intentResponse.queryResult.fulfillmentMessages[0].payload)
+          return res.status(200).json({data:intentResponse.queryResult.fulfillmentMessages[0].payload.fields.data.stringValue,sayThis:intentResponse.queryResult.fulfillmentMessages[0].payload.fields.sayThis.stringValue})
+        else
+          return res.status(200).json({text:intentResponse.queryResult.fulfillmentMessages[0].text.text[0]})
       } catch (error) {
         console.log(error);
       }
