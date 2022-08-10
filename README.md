@@ -9,7 +9,7 @@ Teresa is the modular AI assistant from the future of the past, powered by Googl
 
 **Features:**
 
-- Teresa comes preloaded with this base set of functionalities: Weather reports, web search(Duckduckgo) and small-talk
+- Teresa comes preloaded with these base set of functionalities: Weather reports, web search(Duckduckgo) and small-talk
 - Extremely modular: Teresa is designed to be extended - you can write your own webhooks that add additional functionality without cluttering the codebase.
 - Audio feedback: Just like most AI assistants Teresa will respond both with text and synthesized speech.
 - All you need is a browser: The frontend adapts to the screen of the device, virtually allowing Teresa to be accessed from any device with a browser.
@@ -37,4 +37,5 @@ You can self-host Teresa. Currently, there's an official instance hosted on glit
 
 
 Made with ❤️ by Xploreinfinity ✧･ﾟ: *✧･ﾟ:* *:･ﾟ✧*:･ﾟ✧
+
 ![](https://www.gnu.org/graphics/gplv3-with-text-136x68.png)
